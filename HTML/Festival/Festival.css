@@ -1,0 +1,89 @@
+* {
+    font-family: initial;
+    color: rgb(255, 0, 0);
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("Images/sunset.jpg");
+}
+
+a:hover {
+    background-color: rgb(250, 218, 36);
+}
+
+.gallery{
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.gallery div img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+
+.gallery ::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10%;
+}
+
+#backBtn, #nextBtn {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+table a {
+    margin: 0;
+    padding: 10px;
+    border: solid 2px rgba(255, 0, 0, 0.623);
+    border-radius: 10px;
+}
+
+#attractions td{
+    margin: 0;
+    padding: 10px;
+    border: solid;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    opacity: 0.5;
+}
+
+#programação {
+    margin: 0;
+    padding: 10px;
+    border: solid;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    opacity: 0.5;
+}
+
+.flex-container {
+    display: flex;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Festival.css">
+    <title>Sunset</title>
+</head>
+<body>
+    <h1 style="text-align: center;">SUNSET FESTA</h1>
+    <table>
+        <tr>
+            <td><a href="#about">About</a></td>
+            <td><a href="#bands">Bands</td></a>
+            <td><a href="#calendar">Calendar</td></a>
+        </tr>
+    </table>
+    <br><br>
+    <div class="gallery-wrap">
+        <img src="Images/left button.png" id="backBtn">
+        <div class="gallery">
+            <div>
+                <span><img src="Images/Beach festival.jpg" height="200"></span>
+                <span><img src="Images/DNCE - Cake.jpg" height="200"></span>
+                <span><img src="Images/Festival - praia.jpg" height="200"></span>
+            </div>
+            <div>
+                <span><img src="Images/Leo - Praia.jpeg" height="200"></span>
+                <span><img src="Images/Festival - praia.2.jpg" height="200"></span>
+                <span><img src="Images/Saulo.jpg" height="200"></span>
+            </div>
+        </div>    
+        <img src="Images/Right button.png" id="nextBtn">
+    </div>
+
+<script>
+
+    let scrollContainer = document.querySelector(".gallery");
+    let backBtn = document.getElementById("backBtn");
+    let nextBtn = document.getElementById("nextBtn");
+
+    scrollContainer,addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY
+        scrollContainer.style.scrollBehavior = "auto";
+    });
+
+    nextBtn.addEventListener("click", ()=> {
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft += 900;
+    })
+
+    backBtn.addEventListener("click", ()=> {
+        scrollContainer.style.scrollBehavior = "smooth";
+        scrollContainer.scrollLeft -= 900;
+    })
+
+
+</script>
+    <h2><a name="about">About</a></h2>
+    <p>The Sunset Festa was first held in april 2023, during the summer of Bahia. With the colaboration of
+        various incredible groups and it'1s, today, a great event. </p>
+    <h2><a name="bands">Bands</a></h2>
+    <table id="attractions">
+        <tr>
+            <td><header>DNCE<section><br>DNCE is an American dance-rock band consisting of lead singer Joe Jonas,
+                 drummer Jack Lawless, and guitarist JinJoo Lee. Bassist and keyboardist Cole Whittle
+                  was a part of the band from when it started in 2015 to when it went on hiatus in 2018. 
+                  DNCE's music is mainly dance-rock, dance-pop, pop rock, and funk-pop.</section></td></header>
+            <td><header>Leo Santana<section><br>Nascido e criado no bairro do Lobato em Salvador, 
+                desde a adolescência sempre sonhou em trabalhar como músico, tanto que quando a família se
+                reunia na casa dos avós na cidade de São Domingos, interior da Bahia, tinha o costume de dançar
+                e cantar com os amigos. </section></header></td>
+                <td><header>Saulo Fernandes</header><br><section>Saulo Jorge Fernandes Navarro de Oliveira is a 
+                    Brazilian Axé singer. Before becoming the lead singer of Banda Eva in March 2002, Saulo was
+                    the lead singer of the Banda Chica Fé. In 2013 he left Banda Eva to pursue a solo career</section></td>
+        </tr>
+    </table>
+    <h2><a name="calendar">Calendar</a></h2>
+    <table id="programação">
+        <header>16/04/2024</header>
+        <tr>
+            <td>15:00 - 18:00</td><td>DNCE</td>
+        </tr>
+        <tr>
+            <td>18:00 - 21:00</td><td>Leo Santana</td>
+        </tr>
+        <tr>
+            <td>21:00 - 00:00</td><td>Saulo Fernandes</td>
+        </tr>
+    </table>
+</body>
+</html>
